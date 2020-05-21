@@ -1,0 +1,19 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+     $("#squ").click(function(){
+      var s=parseInt($("#num").val());
+      var n=s*s;
+      $("result").val(n);
+     });
+     $("#cu").click(function(){
+      var s=parseInt($("#num").val());
+      var n=s*s*s;
+      $("result").val(n);
+     });
+    });
+</script>
+Number <input type="text" id="num" size="20"><br>
+Result <input type="text" id="result" size="20"><br>
+<input type="button" value="Square" id="squ">
+<input type="button" value="Cube" id="cu">

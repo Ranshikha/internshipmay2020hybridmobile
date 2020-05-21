@@ -1,0 +1,25 @@
+<script>
+    $(document).ready(function(){
+    $("#save").click(function(){
+        var rollno=$("rollno").val();
+        var name=$("name").val();
+        var coruse=$("course").val();
+        $.post("example6.php",{rollno:rollno,name:name,course:course},function(r,s)
+        
+        {
+            if(r=="done"){
+             $("message").html("Record saved");
+
+       } 
+           else{
+              $("message").html("error"+r);
+       }
+    }
+        );
+    
+    }
+</script>
+Roll Number <input type="text" id="rollno">
+ Name<input type="text" id="name">
+course<input type="text" id="rollno">
+<input type="button" value="save" id="save">
